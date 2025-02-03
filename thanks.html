@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="valentine.css">
+    <title>Thank You!</title>
+</head>
+<body>
+    <div class="question">
+        <img id="image" src="/assets/mochi-cat-glomp.gif" alt="Thank you gif">
+        <h1>It's a date then!</h1>
+        <p id="noCount"></p>
+        <p>Send them a screenshot letting them know you have accepted their invitation!</p>
+    </div>
+    <script>
+        window.onload = function() {
+            const noCount = localStorage.getItem("noCount");
+
+            if (noCount) {
+                document.getElementById("noCount").innerText = `They pressed "No" ${noCount} times!`;
+            }
+            else {
+                document.getElementById("noCount").innerText = "They did not hesitate! They want you! they pressed no 0 times!";
+            }
+
+            localStorage.removeItem("noCount");
+        };
+    </script>
+</body>
+</html>

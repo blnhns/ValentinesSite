@@ -1,0 +1,42 @@
+html {
+    background-color: #F2C4C4;
+}
+
+.question {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+#yes {
+    font-size: 50px;
+    border: solid white;
+    color: white;
+    background-color: green;
+}
+
+#no {
+    font-size: 50px;
+    border: solid white;
+    color: white;
+    background-color: red;
+}
+
+@media (max-width: 768px) {
+  
+    #image {
+        width: 50%;
+    }
+
+    .question h1 {
+      font-size: 100%;
+    }
+  }
